@@ -6,7 +6,7 @@ export PATH=/usr/local/bin:$PATH
 alias g='git'
 alias be='bundle exec '
 alias unicorn='bundle exec unicorn_rails -c config/unicorn.rb -E '
-alias go='cd ~/Dev/rted/'
+alias go='cd ~/Dev/rted/; ls'
 
 #補完機能を使用する
 autoload -U compinit promptinit
@@ -26,7 +26,7 @@ colors
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([%0-9]#)*=0=01;31'
 
 #カレントディレクトリを表示
-PROMPT="%{${fg[white]}%}%[%n][%n]$ %{${reset_color}%}"
+PROMPT="%(?.%{${fg[green]}%}.%{${fg[red]}%})[%n] %{${reset_color}%}%"
 
 #PROMPT=" 
 #%{${fg[white]}%}%~%{${reset_color}%} 
