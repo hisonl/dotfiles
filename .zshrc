@@ -28,9 +28,4 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([%0-9]#)*=0=01;31
 #カレントディレクトリを表示
 PROMPT="%(?.%{${fg[green]}%}.%{${fg[red]}%})[%n] %{${reset_color}%}%"
 
-#PROMPT=" 
-#%{${fg[white]}%}%~%{${reset_color}%} 
-#[%n]$ "
-#PROMPT2='[%n]>'
-
 autoload -Uz zmv
