@@ -1,3 +1,30 @@
+set nocompatible
+filetype off
+filetype plugin indent off
+
+if has('vim_starting')
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+  call neobundle#rc(expand('~/.vim/bundle/'))
+endif
+
+" ========================================
+" Plugin setting
+" ========================================
+NeoBundle 'Shougo/neobundle.vim'
+NeoBundle 'Shougo/vimproc'
+NeoBundle 'tomtom/tcomment_vim'
+NeoBundle 'Lokaltog/vim-powerline'
+NeoBundle 'msanders/snipmate.vim'
+NeoBundle 'Lokaltog/vim-easymotion'
+
+NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'tpope/vim-rails'
+NeoBundle 'tpope/vim-haml'
+NeoBundle 'othree/html5.vim'
+NeoBundle 'elzr/vim-json'
+
+filetype plugin indent on
+
 "" Looks
 syntax on
 colorscheme desert 
@@ -27,18 +54,24 @@ set fileencoding=utf-8
 "" No Backup
 set nobackup
 
+"" Infinity Undo
+if has('persistent_undo')
+  set undodir=~/.vim/undo
+  set undofile
+endif
+
 "" Change the color of carsol in IME
 if has('multi_byte_ime')
-    highlight Cursor guifg=NONE guibg=Green
-            highlight CursorIM guifg=NONE guibg=Purple
-                    endif
+  highlight Cursor guifg=NONE guibg=Green
+  highlight CursorIM guifg=NONE guibg=Purple
+endif
 
 "" Python
 function! s:Exec()
-    exe "!" . &ft . " %"        
-            :endfunction         
-                        command! Exec call <SID>Exec() 
-                                        map <silent> <C-P> :call <SID>Exec()<CR>
+  exe "!" . &ft . " %"        
+    :endfunction         
+      command! Exec call <SID>Exec() 
+        map <silent> <C-P> :call <SID>Exec()<CR>
 
 "" Powerline
 set laststatus=2
@@ -55,23 +88,4 @@ let g:neocomplcache_max_list = 20
 imap <C-k> <Plug>(neocomplcache_snippets_expand)
 smap <C-k> <Plug>(neocomplcache_snippets_expand)
 
-"" NeoBundle -------------------------------------------------
-set nocompatible
-filetype off
-filetype plugin indent off
 
-if has('vim_starting')
-    set runtimepath+=~/.vim/bundle/neobundle.vim/
-            call neobundle#rc(expand('~/.vim/bundle/'))
-                    endif
-
-NeoBundle 'Shougo/vimproc'
-"" NeoBundle 'Shougo/neocomplcache'
-NeoBundle 'Shougo/neobundle.vim'
-NeoBundle 'tomtom/tcomment_vim'
-NeoBundle 'Lokaltog/vim-powerline'
-NeoBundle 'msanders/snipmate.vim'
-NeoBundle 'Lokaltog/vim-easymotion'
-
-filetype plugin on
-filetype indent on

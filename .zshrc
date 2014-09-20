@@ -3,6 +3,7 @@ eval "$(rbenv init - --no-rehash)"
 export PATH=/usr/local/bin:$PATH
 
 # alias
+alias g='git'
 alias be='bundle exec '
 alias unicorn='bundle exec unicorn_rails -c config/unicorn.rb -E '
 alias go='cd ~/Dev/rted/'
@@ -25,8 +26,11 @@ colors
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([%0-9]#)*=0=01;31'
 
 #カレントディレクトリを表示
-PROMPT=" %{${fg[yellow]}%}%~%{${reset_color}%} 
-[%n]$ "
-PROMPT2='[%n]>'
+PROMPT="%{${fg[white]}%}%[%n][%n]$ %{${reset_color}%}"
+
+#PROMPT=" 
+#%{${fg[white]}%}%~%{${reset_color}%} 
+#[%n]$ "
+#PROMPT2='[%n]>'
 
 autoload -Uz zmv
