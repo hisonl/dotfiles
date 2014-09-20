@@ -19,6 +19,7 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 #補完でカラーを使用する
 autoload colors
 zstyle ':completion:*' list-colors "${LS_COLORS}"
+colors
 
 #kill の候補にも色付き表示
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([%0-9]#)*=0=01;31'
