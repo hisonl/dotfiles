@@ -7,6 +7,7 @@ alias g='git'
 alias be='bundle exec '
 alias unicorn='bundle exec unicorn_rails -c config/unicorn.rb -E '
 alias go='cd ~/Dev/rted/; ls'
+alias neso='cd ~/Dev/neso-server/; ls'
 
 #補完機能を使用する
 autoload -U compinit promptinit
