@@ -3,6 +3,8 @@
 	email = heesung_lee@r.recruit.co.jp
 [color]
 	ui = auto
+[core]
+  editor = /usr/bin/vim
 [alias]
 	co = commit
 	st = status
