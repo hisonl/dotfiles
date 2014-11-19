@@ -2,10 +2,13 @@ PATH=$HOME/.rbenv/shims:$PATH
 eval "$(rbenv init - --no-rehash)"
 export PATH=/usr/local/bin:$PATH
 
-# alias
+# command alias
 alias g='git'
 alias be='bundle exec '
 alias unicorn='bundle exec unicorn_rails -c config/unicorn.rb -E '
+alias ber='bundle exec rspec -c '
+
+# project alias
 alias go='cd ~/Dev/rted/; ls'
 alias neso='cd ~/Dev/neso-server/; ls'
 
