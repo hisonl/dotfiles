@@ -10,7 +10,7 @@ alias bers='bundle exec rspec -c '
 alias migrate:reset='bundle exec rake db:migrate:reset'
 
 # project alias
-alias go='cd ~/Dev/rted/; ls'
+alias rted='cd ~/Dev/rted/; ls'
 alias neso='cd ~/Dev/neso-server/; ls'
 
 #補完機能を使用する
