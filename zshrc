@@ -7,7 +7,7 @@ alias g='git'
 alias be='bundle exec '
 alias unicorn='bundle exec unicorn_rails -c config/unicorn.rb -E '
 alias bers='bundle exec rspec -c '
-alias bemr='bundle exec rake db:migrate:reset'
+alias migrate:reset='bundle exec rake db:migrate:reset'
 
 # project alias
 alias go='cd ~/Dev/rted/; ls'
