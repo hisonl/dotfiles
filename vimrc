@@ -16,12 +16,20 @@ NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'msanders/snipmate.vim'
 NeoBundle 'Lokaltog/vim-easymotion'
+NeoBundle 'unite.vim'
 
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'tpope/vim-haml'
+NeoBundle 'slim-template/vim-slim'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'elzr/vim-json'
+
+" 無限undo
+if has('persistent_undo')
+  set undodir=~/.vim/undo
+  set undofile
+endif
 
 filetype plugin indent on
 
