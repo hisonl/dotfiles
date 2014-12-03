@@ -12,6 +12,7 @@ alias migrate:reset='bundle exec rake db:migrate:reset'
 # project alias
 alias rted='cd ~/Dev/rted/; ls'
 alias neso='cd ~/Dev/neso-server/; ls'
+alias aero='cd ~/Dev/aerosmith/; ls'
 
 #補完機能を使用する
 autoload -U compinit promptinit
