@@ -27,6 +27,7 @@ NeoBundle 'slim-template/vim-slim'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'elzr/vim-json'
 NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'vim-scripts/vim-auto-save'
 
 " 無限undo
 if has('persistent_undo')
@@ -51,6 +52,11 @@ let g:unite_source_file_mru_filename_format = ''
 au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
 au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
 
+" ========================================
+" vim-auto-save の設定
+" ========================================
+" デフォルトで有効にする
+let g:auto_save = 1
 
 filetype plugin indent on
 
