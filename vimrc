@@ -26,6 +26,7 @@ NeoBundle 'tpope/vim-haml'
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'elzr/vim-json'
+NeoBundle 'kchmck/vim-coffee-script'
 
 " 無限undo
 if has('persistent_undo')
