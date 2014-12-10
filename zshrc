@@ -1,6 +1,8 @@
-PATH=$HOME/.rbenv/shims:$PATH
-eval "$(rbenv init - --no-rehash)"
-export PATH=/usr/local/bin:$PATH
+# ========================================
+# rbenv setting
+# ========================================
+eval "$(rbenv init -)"
+source `brew --prefix rbenv`/completions/rbenv.zsh
 
 # command alias
 alias g='git'
