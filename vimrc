@@ -13,6 +13,7 @@ endif
 " Plugin setting
 " ========================================
 NeoBundle 'Shougo/neobundle.vim'
+NeoBundle 'Shougo/neocomplete'
 NeoBundle 'Shougo/vimproc'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'Lokaltog/vim-powerline'
@@ -50,6 +51,24 @@ let g:unite_source_file_mru_filename_format = ''
 " ESCキーを2回押すと終了する
 au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
 au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
+
+" ========================================
+" neocomplete設定
+" ========================================
+
+" Use neocomplete.
+let g:neocomplete#enable_at_startup = 1
+" Use smartcase.
+let g:neocomplete#enable_smart_case = 1
+" Set minimum syntax keyword length.
+let g:neocomplete#sources#syntax#min_keyword_length = 4
+let g:neocomplete#auto_completion_start_length = 4
+let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
+
+" 補完が止まった際に、スキップする長さを短くする
+let g:neocomplete#skip_auto_completion_time = '0.2'
+
+
 
 filetype plugin indent on
 
