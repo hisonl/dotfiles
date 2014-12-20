@@ -53,6 +53,9 @@ au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
 
 filetype plugin indent on
 
+"" set backspace
+set backspace=indent,eol,start
+
 "" Looks
 syntax on
 colorscheme desert 
@@ -116,4 +119,19 @@ let g:neocomplcache_max_list = 20
 imap <C-k> <Plug>(neocomplcache_snippets_expand)
 smap <C-k> <Plug>(neocomplcache_snippets_expand)
 
+" ========================================
+" その他
+" ========================================
+" コマンドをステータス行に表示
+set showcmd
+" 現在のモードを表示
+set showmode
+" OSのクリップボードを使用する
+set clipboard+=unnamedplus,unnamed
 
+" ターミナルでマウスを使用できるようにする
+set mouse=a
+set guioptions+=a
+set ttymouse=xterm2
+" 挿入モードでCtrl+kを押すとクリップボードの内容を貼り付けられるようにする
+imap <C-K> <ESC>"*pa
