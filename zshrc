@@ -20,7 +20,12 @@ eval "$(rbenv init -)"
 source `brew --prefix rbenv`/completions/rbenv.zsh
 
 # command alias
+alias grep='grep --color'
 alias g='git'
+alias l='ls -FGThgo'
+alias la='ls -FGThgoa'
+alias binit='bundle init; bundle install --path vendor/bundle'
+alias rinit='bundle exec rails new . --skip-bundle'
 alias be='bundle exec '
 alias unicorn='bundle exec unicorn_rails -c config/unicorn.rb -E '
 alias bers='bundle exec rspec -c '
@@ -45,6 +50,9 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 autoload colors
 zstyle ':completion:*' list-colors "${LS_COLORS}"
 colors
+
+# beepを鳴らさないようにする
+setopt nolistbeep
 
 #kill の候補にも色付き表示
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([%0-9]#)*=0=01;31'
