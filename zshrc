@@ -28,7 +28,6 @@ alias binit='bundle init; bundle install --path vendor/bundle'
 alias rinit='bundle exec rails new . --skip-bundle'
 alias be='bundle exec '
 alias unicorn='bundle exec unicorn_rails -c config/unicorn.rb -E '
-alias bers='bundle exec rspec -c '
 alias migrate:reset='bundle exec rake db:migrate:reset'
 
 # project alias
