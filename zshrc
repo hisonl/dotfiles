@@ -63,13 +63,7 @@ alias rinit='bundle exec rails new . --skip-bundle'
 alias be='bundle exec '
 alias unicorn='bundle exec unicorn_rails -c config/unicorn.rb -E '
 alias migrate:reset='bundle exec rake db:migrate:reset'
-alias cdp='cd $(ghq list -p | peco)'
-
-# project alias
-alias rted='cd ~/Dev/rted/; ls'
-alias neso='cd ~/Dev/neso-server/; ls'
-alias aero='cd ~/Dev/aerosmith/; ls'
-alias kazune='cd ~/Dev/Kazunematiks/; ls'
+alias p='cd $(ghq list -p | peco); ls'
 
 #補完機能を使用する
 autoload -U compinit promptinit
