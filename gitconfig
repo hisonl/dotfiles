@@ -18,3 +18,5 @@
   delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
 [http]
 	postBuffer = 524288000
+[ghq]
+  root = ~/src
