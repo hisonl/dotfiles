@@ -14,6 +14,13 @@ sudo_path=({/usr/local,/usr,}/sbin(N-/))
 path=(~/bin(N-/) /usr/local/bin(N-/) ${path})
 
 # ========================================
+# golang setting
+# ========================================
+export GOPATH=$HOME
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
+
+# ========================================
 # rbenv setting
 # ========================================
 eval "$(rbenv init -)"
