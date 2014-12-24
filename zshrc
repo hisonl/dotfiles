@@ -13,23 +13,19 @@ sudo_path=({/usr/local,/usr,}/sbin(N-/))
 ## pathを設定
 path=(~/bin(N-/) /usr/local/bin(N-/) ${path})
 
-# ========================================
-# direnv setting
-# ========================================
-eval "$(direnv hook $0)"
-
-# ========================================
-# golang setting
-# ========================================
+## golang setting
 export GOPATH=$HOME
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
 
-# ========================================
-# rbenv setting
-# ========================================
+## rbenv setting
 eval "$(rbenv init -)"
 source `brew --prefix rbenv`/completions/rbenv.zsh
+
+# ========================================
+# direnv setting
+# ========================================
+eval "$(direnv hook $0)"
 
 # ========================================
 # peco setting
