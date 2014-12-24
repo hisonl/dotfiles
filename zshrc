@@ -14,6 +14,11 @@ sudo_path=({/usr/local,/usr,}/sbin(N-/))
 path=(~/bin(N-/) /usr/local/bin(N-/) ${path})
 
 # ========================================
+# direnv setting
+# ========================================
+eval "$(direnv hook $0)"
+
+# ========================================
 # golang setting
 # ========================================
 export GOPATH=$HOME
