@@ -71,6 +71,8 @@ alias rinit='bundle exec rails new . --skip-bundle'
 alias be='bundle exec '
 alias unicorn='bundle exec unicorn_rails -c config/unicorn.rb -E '
 alias migrate:reset='bundle exec rake db:migrate:reset'
+alias binstub='bundle install --binstubs=,/bin --path ,/bin'
+alias exenv="echo 'export PATH=./bin:,/bin:$PATH' >> .envrc; direnv allow ."
 alias p='cd $(ghq list -p | peco); pwd'
 
 #補完機能を使用する
