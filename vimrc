@@ -10,7 +10,7 @@ if has('vim_starting')
 endif
 
 " ========================================
-" Plugin setting
+" Plugin Settings
 " ========================================
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/neocomplete'
@@ -36,7 +36,7 @@ if has('persistent_undo')
 endif
 
 " ========================================
-" Unite setting
+" Unite Settings
 " ========================================
 " 入力モードで開始する
 let g:unite_enable_start_insert=1
@@ -58,8 +58,10 @@ noremap <C-P> :Unite buffer<CR>
 noremap <C-N> :Unite -buffer-name=file file<CR>
 " 最近使ったファイルの一覧
 noremap <C-Z> :Unite file_mru<CR>
-" ========================================
 
+" ========================================
+" NeoComplete Settings
+" ========================================
 " Use neocomplete.
 let g:neocomplete#enable_at_startup = 1
 " Use smartcase.
@@ -106,7 +108,8 @@ inoremap <expr><C-e>  neocomplete#cancel_popup()
 " Close popup by <Space>.
 inoremap <expr><Space> pumvisible() ? neocomplete#close_popup() : "\<Space>"
 
-
+" 補完候補の高さを指定
+set pumheight=10
 
 filetype plugin indent on
 
