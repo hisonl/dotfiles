@@ -62,18 +62,15 @@ bindkey '^]' peco-src
 # ========================================
 # command alias
 # ========================================
+alias v='vim'
 alias grep='grep --color'
 alias g='git'
 alias l='ls -FGThgo'
 alias la='ls -FGThgoa'
-alias binit='bundle init; bundle install --path vendor/bundle'
-alias rinit='bundle exec rails new . --skip-bundle'
-alias be='bundle exec '
-alias unicorn='bundle exec unicorn_rails -c config/unicorn.rb -E '
-alias migrate:reset='bundle exec rake db:migrate:reset'
+alias p='cd $(ghq list -p | peco); pwd'
 alias binstub='bundle install --binstubs=,/bin'
 alias exenv="echo 'export PATH=./bin:,/bin:$PATH' >> .envrc; direnv allow ."
-alias p='cd $(ghq list -p | peco); pwd'
+alias unicorn='unicorn_rails -c config/unicorn.rb -E '
 
 #補完機能を使用する
 autoload -U compinit promptinit
