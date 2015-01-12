@@ -20,6 +20,7 @@ NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'msanders/snipmate.vim'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'unite.vim'
+NeoBundle 'scrooloose/nerdtree'
 
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'tpope/vim-rails'
@@ -58,6 +59,11 @@ noremap <C-P> :Unite buffer<CR>
 noremap <C-N> :Unite -buffer-name=file file<CR>
 " 最近使ったファイルの一覧
 noremap <C-Z> :Unite file_mru<CR>
+
+" ========================================
+" Unite Settings
+" ========================================
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
 " ========================================
 " NeoComplete Settings
