@@ -142,6 +142,9 @@ autocmd FileType make setlocal noexpandtab
 set list
 set listchars=tab:>-,trail:-
 
+"" 80字以上ハイライト
+set colorcolumn=80
+
 "" Search
 set history=100
 set ignorecase
