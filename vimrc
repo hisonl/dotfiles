@@ -132,6 +132,10 @@ set softtabstop=2
 set smartindent
 autocmd FileType make setlocal noexpandtab
 
+"" 空白可視化
+set list
+set listchars=tab:>-,trail:-
+
 "" Search
 set history=100
 set ignorecase
