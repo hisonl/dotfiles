@@ -69,7 +69,7 @@ alias l='ls -FGThgo'
 alias la='ls -FGThgoa'
 alias p='cd $(ghq list -p | peco); pwd'
 alias binstub='bundle install --binstubs=,/bin'
-alias exenv="echo 'export PATH=./bin:,/bin:$PATH' >> .envrc; direnv allow ."
+alias exenv="echo 'export PATH=,/bin:./bin:$PATH' >> .envrc; direnv allow ."
 alias unicorn='unicorn_rails -c config/unicorn.rb -E '
 
 #補完機能を使用する
