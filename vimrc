@@ -1,13 +1,13 @@
-set nocompatible
-filetype off
-filetype plugin indent off
+if !1 | finish | endif
 
 if has('vim_starting')
+  set nocompatible
   set runtimepath+=~/.vim/bundle/neobundle.vim/
-  call neobundle#begin(expand('~/.vim/bundle/'))
-  NeoBundleFetch 'Shougo/neobundle.vim'
-  call neobundle#end()
 endif
+
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+NeoBundleFetch 'Shougo/neobundle.vim'
 
 " ========================================
 " Plugin Settings
@@ -20,6 +20,7 @@ NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'msanders/snipmate.vim'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'unite.vim'
+NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'scrooloose/nerdtree'
 
 NeoBundle 'vim-ruby/vim-ruby'
@@ -30,11 +31,22 @@ NeoBundle 'othree/html5.vim'
 NeoBundle 'elzr/vim-json'
 NeoBundle 'kchmck/vim-coffee-script'
 
+call neobundle#end()
+
+filetype plugin indent on
+
+NeoBundleCheck
+
 " 無限undo
 if has('persistent_undo')
   set undodir=~/.vim/undo
   set undofile
 endif
+
+au BufRead,BufNewFile *.coffee set filetype=coffee
+au BufRead,BufNewFile *.jbuilder set filetype=ruby
+
+filetype plugin indent on
 
 " ========================================
 " Unite Settings
@@ -124,7 +136,7 @@ set backspace=indent,eol,start
 
 "" Looks
 syntax on
-colorscheme desert 
+colorscheme desert
 set number
 set ruler
 set showmatch
@@ -140,7 +152,7 @@ autocmd FileType make setlocal noexpandtab
 
 "" 空白可視化
 set list
-set listchars=tab:>-,trail:-
+set listchars=tab:>-,trail:-,extends:>,precedes:<
 
 "" 80字以上ハイライト
 set colorcolumn=80
@@ -169,13 +181,6 @@ if has('multi_byte_ime')
   highlight Cursor guifg=NONE guibg=Green
   highlight CursorIM guifg=NONE guibg=Purple
 endif
-
-"" Python
-function! s:Exec()
-  exe "!" . &ft . " %"        
-    :endfunction         
-      command! Exec call <SID>Exec() 
-        map <silent> <C-P> :call <SID>Exec()<CR>
 
 "" Powerline
 set laststatus=2
@@ -249,13 +254,23 @@ let g:vim_json_syntax_conceal = 0
 " ========================================
 " その他
 " ========================================
+" Vimを使ってくれてありがとうを非表示
+set notitle
+" ;でコマンド入力(;と:を入れ替え)
+noremap ; :
 " コマンドをステータス行に表示
 set showcmd
 " 現在のモードを表示
 set showmode
+" スワップファイル作成場所
+set directory=~/.vim/tmp
+" set noswapfile " スワップファイルを作成しない場合
+" バックアップファイル作成場所
+set backupdir=~/.vim/tmp
 " OSのクリップボードを使用する
 set clipboard+=unnamedplus,unnamed
-
+" カーソルを行頭、行末で止まらないようにする
+set whichwrap=b,s,h,l,<,>,[,]
 " ターミナルでマウスを使用できるようにする
 set mouse=a
 set guioptions+=a
