@@ -1,16 +1,16 @@
 [user]
-	name = hisonl
-	email = hisonlex@gmail.com
+  name = hisonl
+  email = hisonlex@gmail.com
 [color]
-	ui = auto
+  ui = auto
 [core]
   editor = /usr/bin/vim
-  excludesfile = ~/.gitignore
+  excludesfile = /Users/heesung/.gitignore
 [alias]
-	co = commit
-	st = status
-	br = branch -av
-	hist = log --pretty=format:\\\"%h %ad | %s%d [%an]\\\" --graph --date=short
+  co = commit
+  st = status
+  br = branch -av
+  hist = log --pretty=format:\\\"%h %ad | %s%d [%an]\\\" --graph --date=short
   ch = checkout
   st = status
   fe = fetch --prune
@@ -18,6 +18,6 @@
   ignore = !"f() { local s=$1; shift; while [ $# -gt 0 ]; do s="$s,$1"; shift; done; curl "https://www.gitignore.io/api/$s"; }; f"
   delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
 [http]
-	postBuffer = 524288000
+  postBuffer = 524288000
 [ghq]
   root = ~/src
