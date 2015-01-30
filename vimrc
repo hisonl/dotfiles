@@ -29,6 +29,7 @@ NeoBundle 'tpope/vim-haml'
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'elzr/vim-json'
+NeoBundle 'szw/vim-tags'
 NeoBundle 'kchmck/vim-coffee-script'
 
 call neobundle#end()
@@ -250,6 +251,12 @@ map <silent> [Tag]p :tabprevious<CR>
 " ========================================
 " ダブルクォートを隠す機能を無効化
 let g:vim_json_syntax_conceal = 0
+
+" ========================================
+" vim-tags の設定
+" ========================================
+" tagsジャンプの時に複数ある時は一覧表示
+nnoremap <C-]> g<C-]>
 
 " ========================================
 " その他
