@@ -164,6 +164,9 @@ set ignorecase
 set smartcase
 set wrapscan
 
+"" 検索文字列のハイライト
+set hlsearch
+
 "" Encoding
 set encoding=utf-8
 set fileencoding=utf-8
