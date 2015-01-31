@@ -21,3 +21,5 @@
   postBuffer = 524288000
 [ghq]
   root = ~/src
+[push]
+  default = simple
