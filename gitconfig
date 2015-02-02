@@ -4,8 +4,8 @@
 [color]
   ui = auto
 [core]
-  editor = /usr/bin/vim
-  excludesfile = /Users/heesung/.gitignore
+  editor = /usr/local/bin/vim
+  excludesfile = ~/.gitignore
 [alias]
   co = commit
   st = status
