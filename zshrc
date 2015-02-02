@@ -65,6 +65,7 @@ bindkey '^]' peco-src
 alias v='vim'
 alias grep='grep --color'
 alias g='git'
+alias gg='git grep -H --heading --break'
 alias l='ls -FGThgo'
 alias la='ls -FGThgoa'
 alias p='cd $(ghq list -p | peco); pwd'

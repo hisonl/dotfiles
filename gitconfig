@@ -23,3 +23,5 @@
   root = ~/src
 [push]
   default = simple
+[grep]
+  lineNumber = true
