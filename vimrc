@@ -166,6 +166,7 @@ set wrapscan
 
 "" 検索文字列のハイライト
 set hlsearch
+nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
 "" Encoding
 set encoding=utf-8
