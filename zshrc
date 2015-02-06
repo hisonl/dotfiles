@@ -13,6 +13,9 @@ sudo_path=({/usr/local,/usr,}/sbin(N-/))
 ## pathを設定
 path=(~/bin(N-/) /usr/local/bin(N-/) ${path})
 
+## lsの色変更
+export LSCOLORS=gxfxcxdxbxegedabagacad
+
 ## golang setting
 export GOPATH=$HOME
 export GOROOT=/usr/local/opt/go/libexec
