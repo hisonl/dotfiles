@@ -2,5 +2,11 @@
 .DS_Store
 .envrc
 .pryrc
-tags
+
+# exenv
 ,/*
+
+# ctags
+tags
+.tags
+.Gemfile.lock.tags
