@@ -22,6 +22,7 @@ NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'unite.vim'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'rking/ag.vim'
 
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'tpope/vim-rails'
@@ -83,7 +84,8 @@ nnoremap <silent><C-e> :NERDTreeToggle<CR>
 " ========================================
 " Use neocomplete.
 let g:neocomplete#enable_at_startup = 1
-" Use smartcase.
+" 大文字小文字を区別する
+let g:unite_enable_ignore_case = 1
 let g:neocomplete#enable_smart_case = 1
 " Set minimum syntax keyword length.
 let g:neocomplete#sources#syntax#min_keyword_length = 4
@@ -126,6 +128,24 @@ inoremap <expr><C-y>  neocomplete#close_popup()
 inoremap <expr><C-e>  neocomplete#cancel_popup()
 " Close popup by <Space>.
 inoremap <expr><Space> pumvisible() ? neocomplete#close_popup() : "\<Space>"
+
+" ========================================
+" Ag Settings
+" ========================================
+
+" grep検索
+nnoremap <silent> ,g  :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
+" カーソル位置の単語をgrep検索
+nnoremap <silent> ,cg :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W>
+" grep検索結果の再呼出
+nnoremap <silent> ,r  :<C-u>UniteResume search-buffer<CR>
+
+" unite grep に ag(The Silver Searcher) を使う
+if executable('ag')
+  let g:unite_source_grep_command = 'ag'
+  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
+  let g:unite_source_grep_recursive_opt = ''
+endif
 
 " 補完候補の高さを指定
 set pumheight=10
