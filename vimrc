@@ -32,6 +32,7 @@ NeoBundle 'othree/html5.vim'
 NeoBundle 'elzr/vim-json'
 NeoBundle 'szw/vim-tags'
 NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'thinca/vim-quickrun'
 
 call neobundle#end()
 
@@ -275,6 +276,18 @@ map <silent> [Tag]p :tabprevious<CR>
 " ========================================
 " ダブルクォートを隠す機能を無効化
 let g:vim_json_syntax_conceal = 0
+
+" ========================================
+" vim-quickrun
+" ========================================
+let g:quickrun_config = {
+\   "_" : {
+\       "outputter/buffer/split" : ":belowright",
+\       "outputter/buffer/close_on_empty" : 1,
+\       "ruby -hook/time/enable" : 1
+\   },
+\}
+nnoremap <expr><silent> <C-c> quickrun#is_running() ? quickrun#sweep_sessions() : "\<C-c>"
 
 " ========================================
 " vim-tags の設定
