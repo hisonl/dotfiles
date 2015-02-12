@@ -285,11 +285,15 @@ let g:vim_json_syntax_conceal = 0
 " ========================================
 let g:quickrun_config = {
 \   "_" : {
-\       "outputter/buffer/split" : ":belowright",
+\       "outputter/buffer/split" : "vertical",
 \       "outputter/buffer/close_on_empty" : 1,
 \       "ruby -hook/time/enable" : 1
-\   },
+\   }
 \}
+let g:quickrun_config['markdown'] = {
+\      "outputter": "browser"
+\}
+set splitright
 nnoremap <expr><silent> <C-c> quickrun#is_running() ? quickrun#sweep_sessions() : "\<C-c>"
 
 " ========================================
@@ -297,6 +301,15 @@ nnoremap <expr><silent> <C-c> quickrun#is_running() ? quickrun#sweep_sessions() 
 " ========================================
 " tagsジャンプの時に複数ある時は一覧表示
 nnoremap <C-]> g<C-]>
+
+" ========================================
+" key bindings
+" ========================================
+nnoremap s <Nop>
+nnoremap sj <C-w>j
+nnoremap sk <C-w>k
+nnoremap sl <C-w>l
+nnoremap sh <C-w>h
 
 " ========================================
 " その他
