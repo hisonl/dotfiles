@@ -76,7 +76,7 @@ noremap <C-N> :Unite -buffer-name=file file<CR>
 noremap <C-Z> :Unite file_mru<CR>
 
 " ========================================
-" Unite Settings
+" Nerdtree Settings
 " ========================================
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
@@ -195,6 +195,9 @@ set fileencoding=utf-8
 
 "" No Backup
 set nobackup
+
+"" 常にカーソルを中心にする
+set scrolloff=10
 
 "" Infinity Undo
 if has('persistent_undo')
