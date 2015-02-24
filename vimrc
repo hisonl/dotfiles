@@ -27,6 +27,7 @@ NeoBundle 'rking/ag.vim'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'tpope/vim-haml'
+NeoBundle 'soramugi/auto-ctags.vim'
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'elzr/vim-json'
@@ -301,6 +302,11 @@ nnoremap <expr><silent> <C-c> quickrun#is_running() ? quickrun#sweep_sessions() 
 " ========================================
 " tagsジャンプの時に複数ある時は一覧表示
 nnoremap <C-]> g<C-]>
+
+" ========================================
+" auto-ctags の設定
+" ========================================
+let g:auto_ctags = 1
 
 " ========================================
 " key bindings
