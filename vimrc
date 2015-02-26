@@ -156,8 +156,18 @@ set pumheight=10
 
 filetype plugin indent on
 
+" ========================================
+" vim-easy-align Settings
+" ========================================
+" Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
+vmap <Enter> <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
 "" set backspace
 set backspace=indent,eol,start
+
 
 "" Looks
 syntax on
