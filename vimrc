@@ -34,6 +34,8 @@ NeoBundle 'elzr/vim-json'
 NeoBundle 'szw/vim-tags'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'jiangmiao/auto-pairs'
+NeoBundle 'junegunn/vim-easy-align'
 
 call neobundle#end()
 
