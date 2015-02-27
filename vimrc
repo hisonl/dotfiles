@@ -165,7 +165,6 @@ nmap ga <Plug>(EasyAlign)
 "" set backspace
 set backspace=indent,eol,start
 
-
 "" Looks
 syntax on
 colorscheme desert
