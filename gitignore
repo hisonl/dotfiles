@@ -5,6 +5,7 @@
 
 # exenv
 ,/*
+.env
 
 # ctags
 tags
