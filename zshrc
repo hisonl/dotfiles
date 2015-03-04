@@ -25,6 +25,9 @@ export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
 eval "$(rbenv init -)"
 source `brew --prefix rbenv`/completions/rbenv.zsh
 
+## bundle open setting
+export BUNDLER_EDITOR=vim
+
 # ========================================
 # direnv setting
 # ========================================
