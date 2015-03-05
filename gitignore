@@ -12,6 +12,9 @@ tags
 .tags
 .Gemfile.lock.tags
 
+# redis
+dump.rdb
+
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm
 
 *.iml
