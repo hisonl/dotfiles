@@ -350,3 +350,5 @@ set guioptions+=a
 set ttymouse=xterm2
 " 挿入モードでCtrl+kを押すとクリップボードの内容を貼り付けられるようにする
 imap <C-K> <ESC>"*pa
+" Ctrl+[ でescできるようにする
+imap <C-[> <esc>
