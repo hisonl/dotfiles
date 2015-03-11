@@ -350,5 +350,12 @@ set guioptions+=a
 set ttymouse=xterm2
 " 挿入モードでCtrl+kを押すとクリップボードの内容を貼り付けられるようにする
 imap <C-K> <ESC>"*pa
+" 引用符, 括弧の設定
+inoremap { {}<Left>
+inoremap [ []<Left>
+inoremap ( ()<Left>
+inoremap " ""<Left>
+inoremap ' ''<Left>
+inoremap <> <><Left>
 " Ctrl+[ でescできるようにする
-imap <C-[> <esc>
+inoremap <silent> <C-[> <esc>
