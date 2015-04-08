@@ -10,6 +10,7 @@
   co = commit
   st = status
   br = branch -av
+  dl = branch -D
   hist = log --pretty=format:\\\"%h %ad | %s%d [%an]\\\" --graph --date=short
   ch = checkout
   st = status
