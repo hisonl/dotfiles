@@ -79,6 +79,9 @@ alias p='cd $(ghq list -p | peco); pwd'
 alias binstub='bundle install --binstubs=,/bin'
 alias exenv="echo 'export PATH=,/bin:./bin:$PATH' >> .envrc; direnv allow ."
 alias unicorn='unicorn_rails -c config/unicorn.rb -E '
+function search() {
+  find . | xargs grep '$1'
+}
 function rnew() {
   rails new $1 -m https://raw.githubusercontent.com/hisonl/rails_template/master/template.rb
 }
