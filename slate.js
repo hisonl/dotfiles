@@ -67,8 +67,8 @@ S.bindAll({
     "return:cmd,shift": move("screenOriginX", "screenOriginY", "screenSizeX", "screenSizeY"),
 
     // Switch screen
-    "right:cmd": switchScreen("next"),
-    "left:cmd": switchScreen("previous"),
-    "up:cmd": switchScreen("next"),
-    "down:cmd": switchScreen("previous")
+    // "right:cmd": switchScreen("next"),
+    // "left:cmd": switchScreen("previous"),
+    // "up:cmd": switchScreen("next"),
+    // "down:cmd": switchScreen("previous")
 });
