@@ -58,10 +58,10 @@ S.bindAll({
     "down:ctrl,shift": nudge("+0", "+10%"),
 
     // Corner
-    "right:cmd,shift": cornerTo("top-right", "screenSizeX/2", "screenSizeY"),
-    "left:cmd,shift": cornerTo("top-left", "screenSizeX/2", "screenSizeY"),
-    "up:cmd,shift": cornerTo("top-left", "screenSizeX", "screenSizeY/2"),
-    "down:cmd,shift": cornerTo("bottom-left", "screenSizeX", "screenSizeY/2"),
+    // "right:cmd,shift": cornerTo("top-right", "screenSizeX/2", "screenSizeY"),
+    // "left:cmd,shift": cornerTo("top-left", "screenSizeX/2", "screenSizeY"),
+    // "up:cmd,shift": cornerTo("top-left", "screenSizeX", "screenSizeY/2"),
+    // "down:cmd,shift": cornerTo("bottom-left", "screenSizeX", "screenSizeY/2"),
 
     // Move
     "return:cmd,shift": move("screenOriginX", "screenOriginY", "screenSizeX", "screenSizeY"),
