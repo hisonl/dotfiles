@@ -45,28 +45,28 @@ var switchScreen = function (direction) {
 };
 
 S.bindAll({
-    // Resize
-    "right:ctrl": resize("+10%", "+0"),
-    "left:ctrl": resize("-10%", "+0"),
-    "up:ctrl": resize("+0", "-10%"),
-    "down:ctrl": resize("+0", "+10%"),
-
-    // Nudge
-    "right:ctrl,shift": nudge("+10%", "+0"),
-    "left:ctrl,shift": nudge("-10%", "+0"),
-    "up:ctrl,shift": nudge("+0", "-10%"),
-    "down:ctrl,shift": nudge("+0", "+10%"),
-
-    // Corner
+    // // Resize
+    // "right:ctrl": resize("+10%", "+0"),
+    // "left:ctrl": resize("-10%", "+0"),
+    // "up:ctrl": resize("+0", "-10%"),
+    // "down:ctrl": resize("+0", "+10%"),
+    //
+    // // Nudge
+    // "right:ctrl,shift": nudge("+10%", "+0"),
+    // "left:ctrl,shift": nudge("-10%", "+0"),
+    // "up:ctrl,shift": nudge("+0", "-10%"),
+    // "down:ctrl,shift": nudge("+0", "+10%"),
+    //
+    // // Corner
     // "right:cmd,shift": cornerTo("top-right", "screenSizeX/2", "screenSizeY"),
     // "left:cmd,shift": cornerTo("top-left", "screenSizeX/2", "screenSizeY"),
     // "up:cmd,shift": cornerTo("top-left", "screenSizeX", "screenSizeY/2"),
     // "down:cmd,shift": cornerTo("bottom-left", "screenSizeX", "screenSizeY/2"),
-
-    // Move
-    "return:cmd,shift": move("screenOriginX", "screenOriginY", "screenSizeX", "screenSizeY"),
-
-    // Switch screen
+    //
+    // // Move
+    // "return:cmd,shift": move("screenOriginX", "screenOriginY", "screenSizeX", "screenSizeY"),
+    //
+    // // Switch screen
     // "right:cmd": switchScreen("next"),
     // "left:cmd": switchScreen("previous"),
     // "up:cmd": switchScreen("next"),

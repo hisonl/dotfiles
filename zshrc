@@ -79,6 +79,9 @@ alias p='cd $(ghq list -p | peco); pwd'
 alias binstub='bundle install --binstubs=,/bin'
 alias exenv="echo 'export PATH=,/bin:./bin:$PATH' >> .envrc; direnv allow ."
 alias unicorn='unicorn_rails -c config/unicorn.rb -E '
+function grepr() {
+  grep --color -r $1 .
+}
 function search() {
   find $1 -type f ! -path '*/.git/*' -print0 | xargs -0 grep -C1 '$2'
 }
