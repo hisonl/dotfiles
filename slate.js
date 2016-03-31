@@ -64,7 +64,7 @@ S.bindAll({
     // "down:cmd,shift": cornerTo("bottom-left", "screenSizeX", "screenSizeY/2"),
     //
     // // Move
-    // "return:cmd,shift": move("screenOriginX", "screenOriginY", "screenSizeX", "screenSizeY"),
+    "return:cmd,shift": move("screenOriginX", "screenOriginY", "screenSizeX", "screenSizeY"),
     //
     // // Switch screen
     // "right:cmd": switchScreen("next"),
