@@ -16,6 +16,9 @@ path=(~/bin(N-/) /usr/local/bin(N-/) ${path})
 ## lsの色変更
 export LSCOLORS=gxfxcxdxbxegedabagacad
 
+## anaconda setting
+export PATH=~/anaconda/bin:$PATH
+
 ## golang setting
 export GOPATH=$HOME
 export GOROOT=/usr/local/opt/go/libexec
